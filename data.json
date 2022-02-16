@@ -1,65 +1,69 @@
 
-{ userid: "default",
-        username: "defaultUser",
-        wins: 18,
-        losses: 1000,
-        color: 
-            [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
-            { alpha:  1 },
-            ],
-        someArray: 
-            [
-            { name: "foo", value: 0.25 },
-            { name: "bar", value: 0.5 },
-            { name: "baz", value: 0.75 },
-            ]
-    };
+{
+    "profiles": [
+            { "userid": "default",
+                    "username": "defaultUser",
+                    "wins": 18,
+                    "losses": 1000,
+                    "color": 
+                        [
+                        { "red":    0.5 },
+                        { "green":  0.2 },
+                        { "blue":   0.7 },
+                        { "alpha":  1 }
+                        ],
+                    "someArray": 
+                        [
+                        { "name": "foo", "value": 0.25 },
+                        { "name": "bar", "value": 0.5 },
+                        { "name": "baz", "value": 0.75 }
+                        ]
+                },
 
-app.get("/data/kmartinf", (req, res) => {
-    var dummyData = {
-        userid: "kmartinf",
-        username: "Martin",
-        wins: 20,
-        losses: 40,
-        color: 
-            [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
-            { alpha:  1 },
-            ],
-        someArray: 
-            [
-            { name: "foo", value: 1.0 },
-            { name: "bar", value: 2.0 },
-            { name: "baz", value: 3.0 },
-            ]
-    };
-    res.json(dummyData);
-});
 
-app.get("/data/jyamaha", (req, res) => {
-    var dummyData = {
-        userid: "jyamaha",
-        username: "James",
-        wins: 100,
-        losses: 20,
-        color: 
+
+{
+        "userid": "kmartinf",
+        "username": "Martin",
+        "wins": 20,
+        "losses": 40,
+        "color": 
             [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
-            { alpha:  1 },
+            { "red":    0.5 },
+            { "green":  0.2 },
+            { "blue":   0.7 },
+            { "alpha":  1 }
             ],
-        someArray: 
+        "someArray": 
             [
-            { name: "foo", value: 1.5 },
-            { name: "bar", value: 2.5 },
-            { name: "baz", value: 3.5 },
+            { "name": "foo", "value": 1.0 },
+            { "name": "bar", "value": 2.0 },
+            { "name": "baz", "value": 3.0 }
             ]
-    };
-    res.json(dummyData);
-});
+    },
+
+
+
+
+
+{
+        "userid": "jyamaha",
+        "username": "James",
+        "wins":  100,
+        "losses": 20,
+        "color": 
+            [
+            { "red":    0.5 },
+            { "green":  0.2 },
+            { "blue":   0.7 },
+            { "alpha":  1 }
+            ],
+        "someArray": 
+            [
+            { "name": "foo", "value": 1.5 },
+            { "name": "bar", "value": 2.5 },
+            { "name": "baz", "value": 3.5 }
+            ]
+    }
+]
+}
