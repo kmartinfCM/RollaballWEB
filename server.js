@@ -17,7 +17,7 @@ app.set('port', port)
 const server = http.createServer(app)
 
 //App use folder
-app.use(express.static('app2'))
+app.use(express.static('app'))
 
 //Terminal Message
 server.listen(port, () => console.log("server has started! port: " + port) );
@@ -26,7 +26,7 @@ server.listen(port, () => console.log("server has started! port: " + port) );
 //app.get("/", (req, res) => {res.send("Hello, here is your Unity WebGL game:");});
 
 //App Page
-app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/app2/index.html'));});
+app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/app/index.html'));});
 
 
 //Data Page
