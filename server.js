@@ -33,7 +33,7 @@ app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/app4/index.html'
 //app.get("/data/", (req, res) => {res.send("Hello, This is your Data Location");});
 
 //App Page
-app.get("/data/", (req, res) => {res.sendFile(path.join(__dirname, 'data.json'));});
+app.get("/data/main/", (req, res) => {res.sendFile(path.join(__dirname, 'data1.json'));});
 
 
 
@@ -84,9 +84,9 @@ app.get("/data/kmartinf", (req, res) => {
     res.json(dummyData);
 });
 
-app.get("/data/jyamaha", (req, res) => {
+app.get("/data/jyamada", (req, res) => {
     var dummyData = {
-        userid: "jyamaha",
+        userid: "jyamada",
         username: "James",
         wins: 100,
         losses: 20,
