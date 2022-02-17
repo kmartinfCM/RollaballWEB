@@ -69,15 +69,15 @@ app.get("/data/kmartinf", (req, res) => {
         losses: 40,
         color: 
             [
-            { red:    .7 },
-            { green:  .3 },
-            { blue:   .1 },
+            { red:    .1 },
+            { green:  .7 },
+            { blue:   .6 },
             { alpha:  1 },
             ],
         someArray: 
             [
             { name: "foo", value: 1.0 },
-            { name: "bar", value: 2.0 },
+            { name: "bar", value: 10.0 },
             { name: "baz", value: 3.0 },
             ]
     };
