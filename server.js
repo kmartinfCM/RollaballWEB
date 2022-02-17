@@ -46,8 +46,8 @@ app.get("/data/default", (req, res) => {
         losses: 1000,
         color: 
             [
-            { red:    .5 },
-            { green:  .2 },
+            { red:    .1 },
+            { green:  .6 },
             { blue:   .7 },
             { alpha:  1 },
             ],
@@ -69,9 +69,9 @@ app.get("/data/kmartinf", (req, res) => {
         losses: 40,
         color: 
             [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
+            { red:    .7 },
+            { green:  .3 },
+            { blue:   .1 },
             { alpha:  1 },
             ],
         someArray: 
@@ -93,8 +93,8 @@ app.get("/data/jyamaha", (req, res) => {
         color: 
             [
             { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
+            { green:  .4 },
+            { blue:   .5 },
             { alpha:  1 },
             ],
         someArray: 
