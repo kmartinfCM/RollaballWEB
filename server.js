@@ -33,7 +33,10 @@ app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/app4/index.html'
 //app.get("/data/", (req, res) => {res.send("Hello, This is your Data Location");});
 
 //App Page
-app.get("/data/main/", (req, res) => {res.sendFile(path.join(__dirname, 'data1.json'));});
+app.get("/data/json/", (req, res) => {res.sendFile(path.join(__dirname, 'data1.json'));});
+
+//App Page
+app.get("/data/csv/", (req, res) => {res.sendFile(path.join(__dirname, 'data.csv'));});
 
 
 
