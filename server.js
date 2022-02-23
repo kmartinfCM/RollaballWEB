@@ -14,7 +14,7 @@ app.use(cors({origin: "*",}))   // OR    //app.use(cors({origin: "http://127.0.0
 
 //need to review
 app.set('port', port)
-const server = http.createServer(app)
+const server = http.createServer(app) 
 
 //App use folder
 app.use(express.static('app4'))
