@@ -1,3 +1,16 @@
+//App Page
+//Old Location of the JSON file that was NOT made from a CSV file
+app.get("/data/json/", (req, res) => {res.sendFile(path.join(__dirname, 'data1.json'));});
+
+//App Page
+//This is the location of the original CSV file
+app.get("/data/csv/", (req, res) => {res.sendFile(path.join(__dirname, 'data.csv'));});
+
+//App Page
+//This one should be a JSON information which was made from a CSV file
+app.get("/data/csv/json/", (req, res) => {res.sendFile(path.join(__dirname, 'data.csv'));});
+
+
 ///DATA
 app.get("/data/default", (req, res) => {
     var dummyData = {
