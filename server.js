@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require("cors")
 const http = require('http')
 var XLSX = require('./node_modules/xlsx-style/xlsx.js');
-var data = ReadFile('data3.xlsx');
+var data = ReadFile('./data/data3.xlsx');
 const appLocation = "app6"
 
 const port = process.env.PORT || 8000;
