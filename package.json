@@ -12,7 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "csv2json": "^2.0.2",
+    "csvjson-csv2json": "^5.0.6",
+    "csvjson-json2csv": "^1.0.3",
     "express.js": "^1.0.0",
-    "node.js": "0.0.1-security"
+    "node.js": "0.0.1-security",
+    "xlsx-style": "^0.8.13"
   }
 }

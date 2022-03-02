@@ -1,0 +1,43 @@
+{
+  "profiles": [
+    {
+      "default": [
+        { "info": [{ "username": "defaultUser", "wins": 18, "losses": 50 }] },
+        { "color": [{ "red": 0.7, "green": 0.2, "blue": 0.1, "alpha": 1 }] },
+        {
+          "someArray": [
+            { "name": "foo", "value": 0.1 },
+            { "name": "bar", "value": 0.15 },
+            { "name": "baz", "value": 0.19 }
+          ]
+        }
+      ]
+    },
+    {
+      "kmartinf": [
+        { "info": [{ "username": "Martin", "wins": 15, "losses": 70 }] },
+        { "color": [{ "red": 0.7, "green": 0.3, "blue": 0.6, "alpha": 1 }] },
+        {
+          "someArray": [
+            { "name": "foo", "value": 0.3 },
+            { "name": "bar", "value": 0.35 },
+            { "name": "baz", "value": 0.39 }
+          ]
+        }
+      ]
+    },
+    {
+      "jyamada": [
+        { "info": [{ "username": "James", "wins": 10, "losses": 20 }] },
+        { "color": [{ "red": 0.3, "green": 0.7, "blue": 0.6, "alpha": 1 }] },
+        {
+          "someArray": [
+            { "name": "foo", "value": 0.6 },
+            { "name": "bar", "value": 0.65 },
+            { "name": "baz", "value": 0.69 }
+          ]
+        }
+      ]
+    }
+  ]
+}

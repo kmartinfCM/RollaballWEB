@@ -7,9 +7,9 @@
                     "losses": 1000,
                     "color": 
                         [
-                        { "red":    0.5 },
+                        { "red":    0.7 },
                         { "green":  0.2 },
-                        { "blue":   0.7 },
+                        { "blue":   0.1 },
                         { "alpha":  1 }
                         ],
                     "someArray": 
@@ -29,9 +29,9 @@
         "losses": 40,
         "color": 
             [
-            { "red":    0.5 },
+            { "red":    0.1 },
             { "green":  0.2 },
-            { "blue":   0.7 },
+            { "blue":   0.4 },
             { "alpha":  1 }
             ],
         "someArray": 

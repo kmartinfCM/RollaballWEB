@@ -1,108 +1,50 @@
-// This is the entry point for our whole application
+// Require Pagackes and data files
 const express = require("express");
 const path = require('path');
 const cors = require("cors")
 const http = require('http')
-
+var XLSX = require('./node_modules/xlsx-style/xlsx.js');
+var data = ReadFile('data3.xlsx');
+const appLocation = "app6"
 
 const port = process.env.PORT || 8000;
 const app = express();
 
 //Cors-policy
+//the "*" makes it for all ports to bi-pass CORS Policy
 app.use(cors({origin: "*",}))   // OR    //app.use(cors({origin: "http://127.0.0.1:8080",}))
-
 
 //need to review
 app.set('port', port)
 const server = http.createServer(app)
 
 //App use folder
-app.use(express.static('app2'))
+app.use(express.static(appLocation))
 
 //Terminal Message
 server.listen(port, () => console.log("server has started! port: " + port) );
 
-//Main Page
-//app.get("/", (req, res) => {res.send("Hello, here is your Unity WebGL game:");});
-
 //App Page
-app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/app2/index.html'));});
+//app.get("/", (req, res) => {res.send("Hello, here is your Unity WebGL game:");});
+app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/'+ appLocation +'/index.html'));});
 
 
 //Data Page
 //app.get("/data/", (req, res) => {res.send("Hello, This is your Data Location");});
-
-//App Page
-app.get("/data/", (req, res) => {res.sendFile(path.join(__dirname, 'data.json'));});
+app.get("/data/", (req, res) => {res.send(data);});
 
 
 
-///DATA
-app.get("/data/default", (req, res) => {
-    var dummyData = {
-        userid: "default",
-        username: "defaultUser",
-        wins: 18,
-        losses: 1000,
-        color: 
-            [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
-            { alpha:  1 },
-            ],
-        someArray: 
-            [
-            { name: "foo", value: 0.25 },
-            { name: "bar", value: 0.5 },
-            { name: "baz", value: 0.75 },
-            ]
-    };
-    res.json(dummyData);
-});
 
-app.get("/data/kmartinf", (req, res) => {
-    var dummyData = {
-        userid: "kmartinf",
-        username: "Martin",
-        wins: 20,
-        losses: 40,
-        color: 
-            [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
-            { alpha:  1 },
-            ],
-        someArray: 
-            [
-            { name: "foo", value: 1.0 },
-            { name: "bar", value: 2.0 },
-            { name: "baz", value: 3.0 },
-            ]
-    };
-    res.json(dummyData);
-});
 
-app.get("/data/jyamaha", (req, res) => {
-    var dummyData = {
-        userid: "jyamaha",
-        username: "James",
-        wins: 100,
-        losses: 20,
-        color: 
-            [
-            { red:    .5 },
-            { green:  .2 },
-            { blue:   .7 },
-            { alpha:  1 },
-            ],
-        someArray: 
-            [
-            { name: "foo", value: 1.5 },
-            { name: "bar", value: 2.5 },
-            { name: "baz", value: 3.5 },
-            ]
-    };
-    res.json(dummyData);
-});
+///FUNCTIONS
+
+
+//Fuction to make XLSX into JSON
+function ReadFile(filename)
+{  
+  const workbook = XLSX.readFile(filename);
+  const name = workbook.SheetNames[0];
+  const sheet = workbook.Sheets[name];
+  return XLSX.utils.sheet_to_json(sheet);
+}
