@@ -4,7 +4,8 @@ const path = require('path');
 const cors = require("cors")
 const http = require('http')
 var XLSX = require('./node_modules/xlsx-style/xlsx.js');
-var data = ReadFile('data2.xlsx');
+var data = ReadFile('data3.xlsx');
+const appLocation = "app6"
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -18,14 +19,14 @@ app.set('port', port)
 const server = http.createServer(app)
 
 //App use folder
-app.use(express.static('app4'))
+app.use(express.static(appLocation))
 
 //Terminal Message
 server.listen(port, () => console.log("server has started! port: " + port) );
 
 //App Page
 //app.get("/", (req, res) => {res.send("Hello, here is your Unity WebGL game:");});
-app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/app4/index.html'));});
+app.get("/", (req, res) => {res.sendFile(path.join(__dirname, '/'+ appLocation +'/index.html'));});
 
 
 //Data Page
