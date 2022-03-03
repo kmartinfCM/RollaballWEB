@@ -5,7 +5,16 @@ const cors = require("cors")
 const http = require('http')
 var XLSX = require('./node_modules/xlsx-style/xlsx.js');
 var data = ReadFile('./data/data3.xlsx');
-const appLocation = "app7"
+const appLocation = "app9"
+
+var wwwhisper = require('connect-wwwhisper');
+// app holds a reference to express or connect framework, it
+// may be named differently in your source file.
+app.use(wwwhisper());
+
+// Alternatively, if you don't want wwwhisper to insert
+// a logout iframe into HTML responses use.
+app.use(wwwhisper(false));
 
 const port = process.env.PORT || 8000;
 const app = express();
@@ -23,6 +32,7 @@ app.use(express.static(appLocation))
 
 //Terminal Message
 server.listen(port, () => console.log("server has started! port: " + port) );
+
 
 //App Page
 //app.get("/", (req, res) => {res.send("Hello, here is your Unity WebGL game:");});
