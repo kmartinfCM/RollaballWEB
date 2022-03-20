@@ -10,6 +10,8 @@ const appLocation = "app7"
 const port = process.env.PORT || 8000;
 const app = express();
 
+//Test push
+
 //Cors-policy
 //the "*" makes it for all ports to bi-pass CORS Policy
 app.use(cors({origin: "*",}))   // OR    //app.use(cors({origin: "http://127.0.0.1:8080",}))
